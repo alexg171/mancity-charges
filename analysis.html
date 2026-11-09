@@ -171,7 +171,7 @@ window.Quarto = {
 <section id="real-data-panel-provenance" class="level1">
 <h1>1. Real Data Panel &amp; Provenance</h1>
 <p>Strict Real Data Policy: Match statistics (1992/93–2023/24) via football-data.co.uk; Audited Annual Accounts via Companies House (Manchester City FC Ltd Company No.&nbsp;00040946); Comparative Financials via Deloitte Football Money League; Prize Money via UEFA Official Distribution Bulletins. Full citations documented in <code>data/SOURCES.md</code>.</p>
-<div id="c990c070" class="cell" data-execution_count="1">
+<div id="1fc1986c" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -191,7 +191,7 @@ window.Quarto = {
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>city_summary <span class="op">=</span> city_full[[<span class="st">"Season"</span>, <span class="st">"Rank"</span>, <span class="st">"Pts"</span>, <span class="st">"Turnover"</span>, <span class="st">"Commercial"</span>, <span class="st">"Wages"</span>, <span class="st">"NetSpend"</span>]].tail(<span class="dv">15</span>)</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>city_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
@@ -370,7 +370,7 @@ window.Quarto = {
 <section id="econometric-structural-break-tests-bai-perron-chow" class="level1">
 <h1>2. Econometric Structural Break Tests (Bai-Perron &amp; Chow)</h1>
 <p>Testing parameter stability across: 1. <span class="math inline">\(T_{2008}\)</span>: Abu Dhabi United Group takeover (September 2008). 2. <span class="math inline">\(T_{2011}\)</span>: UEFA / Premier League Financial Fair Play regulations enacted. 3. <span class="math inline">\(T_{2018}\)</span>: Premier League investigation launched (November 2018) / end of 115 charges window.</p>
-<div id="091f862c" class="cell" data-execution_count="2">
+<div id="b5a314dc" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.econometrics <span class="im">import</span> detect_structural_breaks</span>
@@ -379,7 +379,7 @@ window.Quarto = {
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df_breaks <span class="op">=</span> pd.read_csv(<span class="st">"outputs/tables/structural_break_tests.csv"</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df_breaks</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
@@ -461,13 +461,13 @@ window.Quarto = {
 <li><strong>Scenario A (Compliant City)</strong>: Capping commercial sponsorship inflation to verified fair market values under FFP.</li>
 <li><strong>Scenario B (Organic City)</strong>: Continuation of pre-takeover historical trend (mid-table mean ~50 pts).</li>
 </ul>
-<div id="e6b39857" class="cell" data-execution_count="3">
+<div id="223fab3e" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_cf <span class="op">=</span> pd.read_csv(<span class="st">"outputs/tables/arimax_carryover_results.csv"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_cf.tail(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -650,13 +650,13 @@ window.Quarto = {
 <section id="vector-autoregression-var-impulse-response-functions-irf" class="level1">
 <h1>4. Vector Autoregression (VAR) &amp; Impulse Response Functions (IRF)</h1>
 <p>System: <span class="math inline">\([\text{Commercial Revenue}, \text{Wage Bill}, \text{Net Spend}, \text{Points}]\)</span></p>
-<div id="fb9854cc" class="cell" data-execution_count="4">
+<div id="3b7e9a7f" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_irf <span class="op">=</span> pd.read_csv(<span class="st">"outputs/tables/var_impulse_response.csv"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df_irf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -721,13 +721,13 @@ window.Quarto = {
 <section id="synthetic-control-method-scm" class="level1">
 <h1>5. Synthetic Control Method (SCM)</h1>
 <p>Constructing a Synthetic Manchester City from constrained donor clubs (Everton, Aston Villa, Tottenham, Arsenal, Liverpool, Newcastle).</p>
-<div id="2d107454" class="cell" data-execution_count="5">
+<div id="b15d6a24" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_weights <span class="op">=</span> pd.read_csv(<span class="st">"outputs/tables/synthetic_control_weights.csv"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df_weights</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
@@ -786,13 +786,13 @@ window.Quarto = {
 <h1>6. Rival Club Externalities &amp; Monetary Damage Ledger</h1>
 <section id="the-alternate-premier-league-champions-scenario-a-b" class="level3">
 <h3 class="anchored" data-anchor-id="the-alternate-premier-league-champions-scenario-a-b">The Alternate Premier League Champions (Scenario A &amp; B)</h3>
-<div id="dde975cf" class="cell" data-execution_count="6">
+<div id="a15861fc" class="cell" data-execution_count="6">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_titles <span class="op">=</span> pd.read_csv(<span class="st">"outputs/tables/alternate_champions_table.csv"</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df_titles</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
@@ -899,13 +899,13 @@ window.Quarto = {
 </section>
 <section id="uefa-champions-league-5th-place-displacement-ledger" class="level3">
 <h3 class="anchored" data-anchor-id="uefa-champions-league-5th-place-displacement-ledger">UEFA Champions League 5th-Place Displacement Ledger</h3>
-<div id="bf22ee66" class="cell" data-execution_count="7">
+<div id="cb62adac" class="cell" data-execution_count="7">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_ucl <span class="op">=</span> pd.read_csv(<span class="st">"outputs/tables/ucl_displacement_ledger.csv"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_ucl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
@@ -1102,13 +1102,13 @@ window.Quarto = {
 </section>
 <section id="cumulative-financial-damage-bill-by-club-m" class="level3">
 <h3 class="anchored" data-anchor-id="cumulative-financial-damage-bill-by-club-m">Cumulative Financial Damage Bill by Club (£M)</h3>
-<div id="79d99493" class="cell" data-execution_count="8">
+<div id="fce65a78" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_damage <span class="op">=</span> pd.read_csv(<span class="st">"outputs/tables/club_damage_bill_summary.csv"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df_damage</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 

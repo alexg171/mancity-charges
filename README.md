@@ -4,6 +4,16 @@ An empirical research package, econometric modeling pipeline, and multimedia vis
 
 ---
 
+## 🚀 Live Applications & Interactive Reports
+
+| Application | Description | Links & Deployment |
+| :--- | :--- | :--- |
+| **📊 Quarto Technical Report** | Full empirical compendium containing regression tables, structural break tests, counterfactual projections, and publication charts. | • **Local Report**: [Open `analysis.html`](analysis.html)<br>• **Source Code**: [`analysis.qmd`](analysis.qmd)<br>• **Web Deploy**: Run `quarto publish quarto-pub analysis.qmd` or `quarto publish netlify analysis.qmd` |
+| **⚡ Streamlit Interactive Explorer** | Dynamic dashboard with counterfactual scenario sliders, alternate table re-simulations, and rival damage calculators. | • **App Code**: [`app.py`](app.py)<br>• **Launch Locally**: `streamlit run app.py`<br>• **Cloud Deploy**: Free via [Streamlit Community Cloud](https://share.streamlit.io/) |
+| **📓 Marimo Reactive Notebook** | Transparent, reactive Python computational notebook for reproducible econometric analysis. | • **Notebook Code**: [`notebook_marimo.py`](notebook_marimo.py)<br>• **Launch Locally**: `marimo edit notebook_marimo.py` |
+
+---
+
 ## 📁 Repository Structure
 
 ```
@@ -50,21 +60,29 @@ city charges/
 
 ### 1. Interactive Streamlit Dashboard
 Launch the interactive web app to explore alternate league tables, toggle counterfactual scenarios, and view the rival club damage bill:
+* **File**: [`app.py`](app.py)
 ```bash
 streamlit run app.py
 ```
 
-### 2. Reactive Marimo Notebook
-Open the reactive Python notebook in your browser:
-```bash
-marimo edit notebook_marimo.py
-```
-
-### 3. Re-render Quarto Technical Report
+### 2. Standalone Quarto Technical Report
+* **Rendered Report**: [Open `analysis.html`](analysis.html) directly in any web browser.
+* **Source**: [`analysis.qmd`](analysis.qmd)
+* **Re-render Command**:
 ```bash
 quarto render analysis.qmd
 ```
-*Note: Opens directly as a standalone `analysis.html` in any web browser.*
+* **Deploy to Web**:
+```bash
+quarto publish quarto-pub analysis.qmd
+```
+
+### 3. Reactive Marimo Notebook
+Open the reactive Python notebook in your browser:
+* **File**: [`notebook_marimo.py`](notebook_marimo.py)
+```bash
+marimo edit notebook_marimo.py
+```
 
 ### 4. Regenerate All Figures & Tables
 ```bash
