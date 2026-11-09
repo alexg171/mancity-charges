@@ -1,0 +1,191 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "679f8dcca0a9264fd164e60d44ba33c3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "0deb3fedd5c4c8b5d56eb2fdf38d0675",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"manchester-city-115-charges-reactive-econometric-notebook\">\u2696\ufe0f Manchester City 115 Charges: Reactive Econometric Notebook</h1>\n<h2 id=\"counterfactual-identification-structural-breaks-rival-externalities\">Counterfactual Identification, Structural Breaks &amp; Rival Externalities</h2>\n<span class=\"paragraph\"><em>Real data compiled from Companies House, Deloitte Football Money League, Football-Data.co.uk, and UEFA Distribution Bulletins.</em></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "c820ffc76d53285261bb82872592778c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "4ba6cd9b03661eeb9ff58411beaba724",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"executive-summary-kpis\">Executive Summary KPIs:</h3>\n<ul>\n<li><strong>Total Premier League Titles Affected</strong>: <strong>8 Titles</strong> (Liverpool: 3, Man Utd: 3, Arsenal: 2)</li>\n<li><strong>Total Estimated Financial Damages to Rivals</strong>: <strong>\u00a3824.6M</strong></li>\n<li><strong>Top Impacted Clubs</strong>: Arsenal (\u00a3203.1M), Tottenham (\u00a3167.7M)</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "85284f0c061123bd6cc0c609fbe4b1cb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"1-the-alternate-premier-league-champions-counterfactual-analysis\">1. The Alternate Premier League Champions (Counterfactual Analysis)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "1cd4deeecb31d1ad4e4cd753d6d0f97f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='PKri-0' random-id='54218636-8937-771f-44b4-4bf695adb299'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;_marimo_row_id&#92;&quot;:0,&#92;&quot;Season&#92;&quot;:&#92;&quot;2011/12&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:89,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:0},{&#92;&quot;_marimo_row_id&#92;&quot;:1,&#92;&quot;Season&#92;&quot;:&#92;&quot;2013/14&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:86,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Chelsea&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:2},{&#92;&quot;_marimo_row_id&#92;&quot;:2,&#92;&quot;Season&#92;&quot;:&#92;&quot;2017/18&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:100,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Tottenham Hotspur&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:19},{&#92;&quot;_marimo_row_id&#92;&quot;:3,&#92;&quot;Season&#92;&quot;:&#92;&quot;2018/19&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:98,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:1},{&#92;&quot;_marimo_row_id&#92;&quot;:4,&#92;&quot;Season&#92;&quot;:&#92;&quot;2020/21&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:86,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:12},{&#92;&quot;_marimo_row_id&#92;&quot;:5,&#92;&quot;Season&#92;&quot;:&#92;&quot;2021/22&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:93,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:1},{&#92;&quot;_marimo_row_id&#92;&quot;:6,&#92;&quot;Season&#92;&quot;:&#92;&quot;2022/23&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:89,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Arsenal&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Arsenal&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:5},{&#92;&quot;_marimo_row_id&#92;&quot;:7,&#92;&quot;Season&#92;&quot;:&#92;&quot;2023/24&#92;&quot;,&#92;&quot;Actual_Champion&#92;&quot;:&#92;&quot;Manchester City&#92;&quot;,&#92;&quot;Actual_Pts&#92;&quot;:91,&#92;&quot;Scenario_A_Champion&#92;&quot;:&#92;&quot;Arsenal&#92;&quot;,&#92;&quot;Scenario_A_Runner_Up&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Scenario_B_Champion&#92;&quot;:&#92;&quot;Arsenal&#92;&quot;,&#92;&quot;Points_Margin&#92;&quot;:2}]&quot;' data-total-rows='8' data-total-columns='7' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;Season&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Actual_Champion&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Actual_Pts&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;Scenario_A_Champion&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Scenario_A_Runner_Up&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Scenario_B_Champion&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Points_Margin&quot;,[&quot;integer&quot;,&quot;int64&quot;]]]' data-selection='&quot;multi&quot;' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='true' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "50a1179c64f18bb44bc8ada927429371",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"2-uefa-champions-league-5th-place-displacement-ledger\">2. UEFA Champions League 5th-Place Displacement Ledger</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "6a2ee56871e123acac9dcdb43e0a72e0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='SFPL-0' random-id='dc51f977-188a-f132-2058-84820d3e627b'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;_marimo_row_id&#92;&quot;:0,&#92;&quot;Season&#92;&quot;:&#92;&quot;2010/11&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:3,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Tottenham Hotspur&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:62,&#92;&quot;City_Pts&#92;&quot;:71,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:9,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:27.1},{&#92;&quot;_marimo_row_id&#92;&quot;:1,&#92;&quot;Season&#92;&quot;:&#92;&quot;2011/12&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:1,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Newcastle United&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:65,&#92;&quot;City_Pts&#92;&quot;:89,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:24,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Europa League&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:30.0},{&#92;&quot;_marimo_row_id&#92;&quot;:2,&#92;&quot;Season&#92;&quot;:&#92;&quot;2012/13&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:2,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Tottenham Hotspur&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:72,&#92;&quot;City_Pts&#92;&quot;:78,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:6,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:30.4},{&#92;&quot;_marimo_row_id&#92;&quot;:3,&#92;&quot;Season&#92;&quot;:&#92;&quot;2013/14&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:1,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Everton&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:72,&#92;&quot;City_Pts&#92;&quot;:86,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:14,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:32.3},{&#92;&quot;_marimo_row_id&#92;&quot;:4,&#92;&quot;Season&#92;&quot;:&#92;&quot;2014/15&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:2,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Tottenham Hotspur&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:64,&#92;&quot;City_Pts&#92;&quot;:79,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:15,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Europa League&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:35.2},{&#92;&quot;_marimo_row_id&#92;&quot;:5,&#92;&quot;Season&#92;&quot;:&#92;&quot;2015/16&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:4,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:66,&#92;&quot;City_Pts&#92;&quot;:66,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:0,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:42.0},{&#92;&quot;_marimo_row_id&#92;&quot;:6,&#92;&quot;Season&#92;&quot;:&#92;&quot;2016/17&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:3,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Arsenal&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:75,&#92;&quot;City_Pts&#92;&quot;:78,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:3,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:45.0},{&#92;&quot;_marimo_row_id&#92;&quot;:7,&#92;&quot;Season&#92;&quot;:&#92;&quot;2017/18&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:1,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Chelsea&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:70,&#92;&quot;City_Pts&#92;&quot;:100,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:30,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Europa League&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:47.2},{&#92;&quot;_marimo_row_id&#92;&quot;:8,&#92;&quot;Season&#92;&quot;:&#92;&quot;2018/19&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:1,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Arsenal&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:70,&#92;&quot;City_Pts&#92;&quot;:98,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:28,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Europa League&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:54.0},{&#92;&quot;_marimo_row_id&#92;&quot;:9,&#92;&quot;Season&#92;&quot;:&#92;&quot;2019/20&#92;&quot;,&#92;&quot;City_Actual_Rank&#92;&quot;:2,&#92;&quot;Displaced_5th_Club&#92;&quot;:&#92;&quot;Leicester City&#92;&quot;,&#92;&quot;Displaced_Club_Pts&#92;&quot;:62,&#92;&quot;City_Pts&#92;&quot;:81,&#92;&quot;Pts_Gap_to_UCL&#92;&quot;:19,&#92;&quot;Scenario_A_UCL_Status&#92;&quot;:&#92;&quot;Europa League&#92;&quot;,&#92;&quot;Scenario_B_UCL_Status&#92;&quot;:&#92;&quot;Qualified for UCL&#92;&quot;,&#92;&quot;Direct_UEFA_Prize_Loss_M&#92;&quot;:50.0}]&quot;' data-total-rows='14' data-total-columns='9' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;Season&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;City_Actual_Rank&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;Displaced_5th_Club&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Displaced_Club_Pts&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;City_Pts&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;Pts_Gap_to_UCL&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;Scenario_A_UCL_Status&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Scenario_B_UCL_Status&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Direct_UEFA_Prize_Loss_M&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-selection='&quot;multi&quot;' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='true' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "f0816a25c1b9288a0bccded4a63cc7cf",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"3-club-cumulative-damage-bill-m\">3. Club Cumulative Damage Bill (\u00a3M)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "5c0d433684ba00291520992990c832c5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='RGSE-0' random-id='ed5487eb-05cc-af53-0304-cfe0cda592d3'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;_marimo_row_id&#92;&quot;:0,&#92;&quot;Club&#92;&quot;:&#92;&quot;Arsenal&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:2,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:3,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:155.0,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:48.1,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:203.1},{&#92;&quot;_marimo_row_id&#92;&quot;:1,&#92;&quot;Club&#92;&quot;:&#92;&quot;Tottenham Hotspur&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:0,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:4,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:157.7,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:10.0,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:167.7},{&#92;&quot;_marimo_row_id&#92;&quot;:2,&#92;&quot;Club&#92;&quot;:&#92;&quot;Liverpool&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:3,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:1,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:60.5,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:63.4,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:123.9},{&#92;&quot;_marimo_row_id&#92;&quot;:3,&#92;&quot;Club&#92;&quot;:&#92;&quot;Leicester City&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:0,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:2,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:102.5,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:5.0,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:107.5},{&#92;&quot;_marimo_row_id&#92;&quot;:4,&#92;&quot;Club&#92;&quot;:&#92;&quot;Manchester United&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:3,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:1,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:42.0,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:63.4,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:105.4},{&#92;&quot;_marimo_row_id&#92;&quot;:5,&#92;&quot;Club&#92;&quot;:&#92;&quot;Chelsea&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:0,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:1,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:47.2,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:2.5,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:49.7},{&#92;&quot;_marimo_row_id&#92;&quot;:6,&#92;&quot;Club&#92;&quot;:&#92;&quot;Everton&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:0,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:1,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:32.3,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:2.5,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:34.8},{&#92;&quot;_marimo_row_id&#92;&quot;:7,&#92;&quot;Club&#92;&quot;:&#92;&quot;Newcastle United&#92;&quot;,&#92;&quot;Lost_PL_Titles&#92;&quot;:0,&#92;&quot;Lost_UCL_Campaigns&#92;&quot;:1,&#92;&quot;UEFA_Prize_Loss_M&#92;&quot;:30.0,&#92;&quot;Domestic_Merit_Title_Loss_M&#92;&quot;:2.5,&#92;&quot;Total_Estimated_Financial_Damage_M&#92;&quot;:32.5}]&quot;' data-total-rows='8' data-total-columns='6' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;Club&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Lost_PL_Titles&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;Lost_UCL_Campaigns&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;UEFA_Prize_Loss_M&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Domestic_Merit_Title_Loss_M&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Total_Estimated_Financial_Damage_M&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-selection='&quot;multi&quot;' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='true' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "f42b296ce717c146712e8bf62f5bdbb9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"4-econometric-structural-break-tests-chow-f-tests-bai-perron\">4. Econometric Structural Break Tests (Chow F-Tests &amp; Bai-Perron)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "7e9d3de80e3f3a71c7fdc7071e839bee",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='emfo-0' random-id='ad16af4c-4e66-495d-c69d-08853beeacf9'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;_marimo_row_id&#92;&quot;:0,&#92;&quot;Variable&#92;&quot;:&#92;&quot;Points&#92;&quot;,&#92;&quot;Endogenous_Break_Years&#92;&quot;:&#92;&quot;2005, 2010&#92;&quot;,&#92;&quot;Chow_2008_F&#92;&quot;:2.77,&#92;&quot;Chow_2008_pVal&#92;&quot;:0.088088,&#92;&quot;Chow_2011_F&#92;&quot;:5.52,&#92;&quot;Chow_2011_pVal&#92;&quot;:0.012897,&#92;&quot;Chow_2018_F&#92;&quot;:2.96,&#92;&quot;Chow_2018_pVal&#92;&quot;:0.07577},{&#92;&quot;_marimo_row_id&#92;&quot;:1,&#92;&quot;Variable&#92;&quot;:&#92;&quot;Commercial Revenue&#92;&quot;,&#92;&quot;Endogenous_Break_Years&#92;&quot;:&#92;&quot;2010, 2015&#92;&quot;,&#92;&quot;Chow_2008_F&#92;&quot;:40.43,&#92;&quot;Chow_2008_pVal&#92;&quot;:1.4263e-07,&#92;&quot;Chow_2011_F&#92;&quot;:39.58,&#92;&quot;Chow_2011_pVal&#92;&quot;:1.6784e-07,&#92;&quot;Chow_2018_F&#92;&quot;:2.51,&#92;&quot;Chow_2018_pVal&#92;&quot;:0.10824},{&#92;&quot;_marimo_row_id&#92;&quot;:2,&#92;&quot;Variable&#92;&quot;:&#92;&quot;Wage Bill&#92;&quot;,&#92;&quot;Endogenous_Break_Years&#92;&quot;:&#92;&quot;2010, 2015&#92;&quot;,&#92;&quot;Chow_2008_F&#92;&quot;:6.36,&#92;&quot;Chow_2008_pVal&#92;&quot;:0.0076963,&#92;&quot;Chow_2011_F&#92;&quot;:1.43,&#92;&quot;Chow_2011_pVal&#92;&quot;:0.26428,&#92;&quot;Chow_2018_F&#92;&quot;:2.28,&#92;&quot;Chow_2018_pVal&#92;&quot;:0.12996},{&#92;&quot;_marimo_row_id&#92;&quot;:3,&#92;&quot;Variable&#92;&quot;:&#92;&quot;Net Spend&#92;&quot;,&#92;&quot;Endogenous_Break_Years&#92;&quot;:&#92;&quot;2005, 2020&#92;&quot;,&#92;&quot;Chow_2008_F&#92;&quot;:4.88,&#92;&quot;Chow_2008_pVal&#92;&quot;:0.01942,&#92;&quot;Chow_2011_F&#92;&quot;:3.0,&#92;&quot;Chow_2011_pVal&#92;&quot;:0.073823,&#92;&quot;Chow_2018_F&#92;&quot;:10.43,&#92;&quot;Chow_2018_pVal&#92;&quot;:0.00087721}]&quot;' data-total-rows='4' data-total-columns='8' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;Variable&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Endogenous_Break_Years&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;Chow_2008_F&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Chow_2008_pVal&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Chow_2011_F&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Chow_2011_pVal&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Chow_2018_F&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Chow_2018_pVal&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-selection='&quot;multi&quot;' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='true' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "9bffa256bd64bc88b939c088ac4e85f1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"5-arimax-points-trajectory-counterfactual-projections\">5. ARIMAX Points Trajectory &amp; Counterfactual Projections</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "63a29bf22e41eb56917ab6aacfe8e40e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nWHF-0' random-id='e4e15f2d-2b73-b33c-420f-a01bffaa8cea'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;_marimo_row_id&#92;&quot;:0,&#92;&quot;Season&#92;&quot;:&#92;&quot;2009/10&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2009,&#92;&quot;Actual_Pts&#92;&quot;:67.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:61.6,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:43.7,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:5.4,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:23.3},{&#92;&quot;_marimo_row_id&#92;&quot;:1,&#92;&quot;Season&#92;&quot;:&#92;&quot;2010/11&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2010,&#92;&quot;Actual_Pts&#92;&quot;:71.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:56.5,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:43.9,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:14.5,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:27.1},{&#92;&quot;_marimo_row_id&#92;&quot;:2,&#92;&quot;Season&#92;&quot;:&#92;&quot;2011/12&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2011,&#92;&quot;Actual_Pts&#92;&quot;:89.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:74.5,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:44.2,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:14.5,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:44.8},{&#92;&quot;_marimo_row_id&#92;&quot;:3,&#92;&quot;Season&#92;&quot;:&#92;&quot;2012/13&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2012,&#92;&quot;Actual_Pts&#92;&quot;:78.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:63.5,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:44.4,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:14.5,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:33.6},{&#92;&quot;_marimo_row_id&#92;&quot;:4,&#92;&quot;Season&#92;&quot;:&#92;&quot;2013/14&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2013,&#92;&quot;Actual_Pts&#92;&quot;:86.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:71.5,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:44.7,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:14.5,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:41.3},{&#92;&quot;_marimo_row_id&#92;&quot;:5,&#92;&quot;Season&#92;&quot;:&#92;&quot;2014/15&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2014,&#92;&quot;Actual_Pts&#92;&quot;:79.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:64.5,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:44.9,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:14.5,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:34.1},{&#92;&quot;_marimo_row_id&#92;&quot;:6,&#92;&quot;Season&#92;&quot;:&#92;&quot;2015/16&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2015,&#92;&quot;Actual_Pts&#92;&quot;:66.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:53.2,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:45.2,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:12.8,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:20.8},{&#92;&quot;_marimo_row_id&#92;&quot;:7,&#92;&quot;Season&#92;&quot;:&#92;&quot;2016/17&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2016,&#92;&quot;Actual_Pts&#92;&quot;:78.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:63.5,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:45.4,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:14.5,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:32.6},{&#92;&quot;_marimo_row_id&#92;&quot;:8,&#92;&quot;Season&#92;&quot;:&#92;&quot;2017/18&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2017,&#92;&quot;Actual_Pts&#92;&quot;:100.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:85.5,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:45.7,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:14.5,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:54.3},{&#92;&quot;_marimo_row_id&#92;&quot;:9,&#92;&quot;Season&#92;&quot;:&#92;&quot;2018/19&#92;&quot;,&#92;&quot;SeasonStart&#92;&quot;:2018,&#92;&quot;Actual_Pts&#92;&quot;:98.0,&#92;&quot;Scenario_A_Compliant_Pts&#92;&quot;:82.0,&#92;&quot;Scenario_B_Organic_Pts&#92;&quot;:45.9,&#92;&quot;Breach_Treatment_Gap_A&#92;&quot;:16.0,&#92;&quot;Breach_Treatment_Gap_B&#92;&quot;:52.1}]&quot;' data-total-rows='15' data-total-columns='7' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;Season&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;SeasonStart&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;Actual_Pts&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Scenario_A_Compliant_Pts&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Scenario_B_Organic_Pts&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Breach_Treatment_Gap_A&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Breach_Treatment_Gap_B&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-selection='&quot;multi&quot;' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='true' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

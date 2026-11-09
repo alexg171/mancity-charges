@@ -1,0 +1,6 @@
+# Project Rules & Working Style
+- Do not make major architectural or dependency decisions unilaterally.
+- Always explain trade-offs and propose options before introducing new libraries.
+- Keep implementations modular and iterate in small, verifiable steps.
+- Provide unit tests and run verification before declaring a step done.
+- Include concise rationale for non-obvious design choices.
