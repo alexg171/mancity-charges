@@ -4,13 +4,13 @@ An empirical research package, econometric modeling pipeline, and multimedia vis
 
 ---
 
-## 🚀 Live Applications & Interactive Reports
+## 🚀 Live Deployed Applications & Reports
 
-| Application | Description | Links & Deployment |
+| Application | Description | Live Links |
 | :--- | :--- | :--- |
-| **📊 Quarto Technical Report** | Full empirical compendium containing regression tables, structural break tests, counterfactual projections, and publication charts. | • **Local Report**: [Open `analysis.html`](analysis.html)<br>• **Source Code**: [`analysis.qmd`](analysis.qmd)<br>• **Web Deploy**: Run `quarto publish quarto-pub analysis.qmd` or `quarto publish netlify analysis.qmd` |
-| **⚡ Streamlit Interactive Explorer** | Dynamic dashboard with counterfactual scenario sliders, alternate table re-simulations, and rival damage calculators. | • **App Code**: [`app.py`](app.py)<br>• **Launch Locally**: `streamlit run app.py`<br>• **Cloud Deploy**: Free via [Streamlit Community Cloud](https://share.streamlit.io/) |
-| **📓 Marimo Reactive Notebook** | Transparent, reactive Python computational notebook for reproducible econometric analysis. | • **Notebook Code**: [`notebook_marimo.py`](notebook_marimo.py)<br>• **Launch Locally**: `marimo edit notebook_marimo.py` |
+| **📊 Quarto Econometric Report** | Complete empirical compendium containing regression tables, structural break tests, counterfactual projections, and publication charts. | • **Live Report**: [alexg171.github.io/mancity-charges/analysis.html](https://alexg171.github.io/mancity-charges/analysis.html)<br>• **Local File**: [`analysis.html`](analysis.html) |
+| **⚡ Streamlit Interactive Dashboard** | Interactive web app with scenario sliders, alternate table re-simulations, and rival club damage ledgers. | • **Live Dashboard**: [mancity-charges.streamlit.app](https://mancity-charges.streamlit.app)<br>• **App File**: [`app.py`](app.py) |
+| **📓 Marimo Reactive Notebook** | Transparent, reactive Python computational notebook for reproducible econometric analysis. | • **Notebook File**: [`notebook_marimo.py`](notebook_marimo.py) |
 
 ---
 
@@ -47,39 +47,29 @@ city charges/
 │   │   └── synthetic_control_weights.md (.csv)
 │   └── motion/                   # Animated b-roll assets for Substack / video
 │       └── damage_bill_race.gif
-├── analysis.qmd                  # Quarto technical compendium (run: quarto render analysis.qmd)
+├── analysis.qmd                  # Quarto technical compendium
 ├── analysis.html                 # Rendered standalone HTML technical report
-├── app.py                        # Streamlit interactive application (run: streamlit run app.py)
-├── notebook_marimo.py            # Reactive Marimo notebook (run: marimo edit notebook_marimo.py)
+├── app.py                        # Streamlit interactive application
+├── notebook_marimo.py            # Reactive Marimo notebook
 └── requirements.txt              # Project dependencies
 ```
 
 ---
 
-## ⚡ How to Run
+## ⚡ Running Locally
 
-### 1. Interactive Streamlit Dashboard
-Launch the interactive web app to explore alternate league tables, toggle counterfactual scenarios, and view the rival club damage bill:
-* **File**: [`app.py`](app.py)
+### 1. Launch Streamlit Dashboard
 ```bash
 streamlit run app.py
 ```
 
-### 2. Standalone Quarto Technical Report
-* **Rendered Report**: [Open `analysis.html`](analysis.html) directly in any web browser.
-* **Source**: [`analysis.qmd`](analysis.qmd)
-* **Re-render Command**:
+### 2. Open Quarto Technical Report
+Open [`analysis.html`](analysis.html) directly in any web browser, or re-render:
 ```bash
 quarto render analysis.qmd
 ```
-* **Deploy to Web**:
-```bash
-quarto publish quarto-pub analysis.qmd
-```
 
-### 3. Reactive Marimo Notebook
-Open the reactive Python notebook in your browser:
-* **File**: [`notebook_marimo.py`](notebook_marimo.py)
+### 3. Launch Marimo Notebook
 ```bash
 marimo edit notebook_marimo.py
 ```
